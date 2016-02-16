@@ -24,6 +24,7 @@
 		?>
 	</div>
     
+    
         <div class="col-4"><?php
 		include_once 'configBD.php';
 
