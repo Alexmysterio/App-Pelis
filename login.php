@@ -2,7 +2,7 @@
  <html>
     <head>
         <meta charset="UTF-8">
-        <title>Inicio de Sesion </title>
+        <title>Inicio de Sesion | Peliculas Alex S.L.</title>
         <link rel="stylesheet" href="estilos.css" type="text/css"/> 
     </head>
     <body>
@@ -13,6 +13,7 @@
         
         // Inicia la sesión.
         session_start();
+        $usuario=$_SESSION[Nombreuser];
         cabecera();
         
         // Si hay mensaje de error, muéstralo.
@@ -29,8 +30,11 @@
 		echo "<p><a href='login.php'>Iniciar Sesion</a></p>
 		<p><a href='registro.php'>Registro</a></p>";}
 		if(isset($_SESSION['autenticado'])){
-		echo "<p><a href='logout.php'>Cerrar Sesion</a></p>";}
-		?>
+		echo "<p><a href='perfil.php'>Mi Perfil($usuario)</a></p>
+                     <p><a href='logout.php'>Cerrar Sesion</a></p>";}
+                if($_SESSION['Rol'] == Administrador){
+                echo  "<p><a href='admin.php'>Panel de Administrador </a></p>";}
+                ?>
 	</div>
 
             <div class="col-2 formuLogin">

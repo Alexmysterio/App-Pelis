@@ -1,6 +1,7 @@
 
 * {
     box-sizing: border-box;
+    background-image: url("fondo.jpg");
 } 
  /* Para móviles: */
 [class*="col-"] {
@@ -26,3 +27,22 @@
 }
 
 
+.cabecera{
+    color:red;
+}
+
+.listapelis{
+    border: 1px solid;
+}
+
+.menulateral{
+    background-color: blue;
+}
+
+.bienvenida{
+    background-color: white;
+}
+
+.buscador{
+    background-color: white;
+}

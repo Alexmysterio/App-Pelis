@@ -32,7 +32,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="estilos.css" type="text/css"/> 
-    <title>Registro</title>
+    <title>Registro | Peliculas Alex S.L.</title>
   </head>
   <body>
 
@@ -40,6 +40,7 @@
         require 'funciones.php';
         require 'control.php';
         session_start();
+        $usuario=$_SESSION[Nombreuser];
         cabecera()
     ?>
 	<div class="col-4">
@@ -51,7 +52,8 @@
 		echo "<p><a href='login.php'>Iniciar Sesion</a></p>
 		<p><a href='registro.php'>Registro</a></p>";}
 		if(isset($_SESSION['autenticado'])){
-		echo "<p><a href='logout.php'>Cerrar Sesion</a></p>";}
+		echo "<p><a href='perfil.php'>Mi Perfil($usuario)</a></p>
+                     <p><a href='logout.php'>Cerrar Sesion</a></p>";}
 		?>
 	</div>
       

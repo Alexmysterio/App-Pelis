@@ -5,7 +5,7 @@
     // que el PHP, para evitar sobrecargar el servidor con
     // datos incorrectos (validación JS con función registro()).
     
-        session_start();
+
     
     if(isset($_POST['anadepeli'])){
         include_once 'configBD.php';
@@ -34,14 +34,16 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="estilos.css" type="text/css"/> 
-    <title>Registro</title>
+    <title>Publicar Pelicula | Peliculas Alex S.L.</title>
   </head>
   <body>
 
     <?php
         require 'funciones.php';
-        require 'control.php';
-        seguridad_re();
+        require 'control.php';       
+        session_start();
+        seguridad_re();   
+        $usuario=$_SESSION[Nombreuser];
         cabecera();
 
 
@@ -56,12 +58,15 @@
 		echo "<p><a href='login.php'>Iniciar Sesion</a></p>
 		<p><a href='registro.php'>Registro</a></p>";}
 		if(isset($_SESSION['autenticado'])){
-		echo "<p><a href='logout.php'>Cerrar Sesion</a></p>";}
-		?>
+		echo "<p><a href='perfil.php'>Mi Perfil($usuario)</a></p>
+                     <p><a href='logout.php'>Cerrar Sesion</a></p>";}
+                if($_SESSION['Rol'] == Administrador){
+                echo  "<p><a href='admin.php'>Panel de Administrador </a></p>";}
+                ?>
 	</div>
-      
-      <div class="col-5 formuRegistro">
-          <h3>Formulario de registro.</h3>
+
+      <div class="col-5 formuanadepeli">
+          <h3>Publica una Pelicula.</h3>
           <form name="anadepeli" id="formularioanadepeli" method="POST" action="">
 			Nombre de la Pelicula:
             <input type="text" name="Nombre" placeholder="Nombre" required/><br>

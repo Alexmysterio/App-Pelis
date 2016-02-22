@@ -2,8 +2,8 @@
 
 <html>
 <head>
-		<link rel="stylesheet" href="estilos.css" type="text/css"/> 
-        <title>Listado de Peliculas</title>
+        <link rel="stylesheet" href="estilos.css" type="text/css"/> 
+        <title>Listado de Peliculas | Peliculas Alex S.L.</title>
 
 </head>
 <body>
@@ -11,6 +11,7 @@
         require 'funciones.php';
         require 'control.php';
         session_start();
+        $usuario=$_SESSION[Nombreuser];
         cabecera()
     ?>
     
@@ -23,11 +24,14 @@
 		echo "<p><a href='login.php'>Iniciar Sesion</a></p>
 		<p><a href='registro.php'>Registro</a></p>";}
 		if(isset($_SESSION['autenticado'])){
-		echo "<p><a href='logout.php'>Cerrar Sesion</a></p>";}
-		?>
+		echo "<p><a href='perfil.php'>Mi Perfil($usuario)</a></p>
+                     <p><a href='logout.php'>Cerrar Sesion</a></p>";}
+                if($_SESSION['Rol'] == Administrador){
+                echo  "<p><a href='admin.php'>Panel de Administrador </a></p>";}
+                ?>
 	</div>
 
-	<div class="col-4"><?php
+	<div class="listapelis col-4"><?php
 		include_once 'configBD.php';
 
 		//Conexion a la base de datos
@@ -46,7 +50,12 @@
 		?>
 	</div>
           
-
+	<div class="col-4"><p>Buscar una pelicula</p>
+            <form method="POST" action="busqueda.php"> 
+            <input type="text" name="busqueda" size="20"><br><br> 
+            <input type="submit" value="Buscar" name="buscar"> 
+            </form> 
+	</div>
 
 
 </body>
