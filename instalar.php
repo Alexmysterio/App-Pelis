@@ -15,12 +15,12 @@
 	echo "OK.<br>Creando tabla Usuarios...";
 	$sql = "CREATE TABLE if not exists usuarios (
   ID int(11) NOT NULL AUTO_INCREMENT,
-  Mail_login varchar(256) NOT NULL,
+  Mail_login varchar(128) UNIQUE NOT NULL,
   Password varchar(256) NOT NULL,
   Nombre varchar(256) NOT NULL,
   Apellidos varchar(256) NOT NULL,
   Nacimiento date NOT NULL,
-  Rol varchar(128) NOT NULL DEFAULT 'Registrado',
+  Rol varchar(20) NOT NULL DEFAULT 'Registrado',
   PRIMARY KEY (ID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
 	mysqli_query($conex, $sql) or die("Error.".mysqli_error($conex));

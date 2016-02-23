@@ -1,7 +1,7 @@
 
 * {
     box-sizing: border-box;
-    background-image: url("fondo.jpg");
+    background-image: url("fondo.png");
 } 
  /* Para móviles: */
 [class*="col-"] {
@@ -29,6 +29,7 @@
 
 .cabecera{
     color:red;
+    text-align: center;
 }
 
 .listapelis{
