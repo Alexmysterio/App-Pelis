@@ -1,6 +1,3 @@
-$(document).ready(function() {
-    $("#resultado").html('<p>Aquí aparecen los resultados de la búsqueda</p>');
-});
 
 function buscauser() {
     var textoBusqueda = $("input#busqueda").val();

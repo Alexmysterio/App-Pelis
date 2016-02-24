@@ -34,7 +34,6 @@ function seguridad_ad($Rol){
         header("Location: index.php?error=NoAutenticado");
         exit();
     }
-       
 }
 
 ?>

@@ -13,7 +13,7 @@ if (isset($b) && $b != "") {
     $conex = mysqli_connect($host, $user, $password, $database, $port);
      
     // Búsqueda. Solo muestra los documentos públicos o del usuario.
-    $sql ="SELECT peliculas.nombre 'nombrepeli', genero, director, usuarios.Nombre 'nombreautor', enlace FROM peliculas,usuarios where peliculas.ID_Autor = usuarios.ID and peliculas.nombre like '%$b%';";
+    $sql ="SELECT peliculas.id 'idpeli', usuarios.id 'iduser', peliculas.nombre 'nombrepeli', genero, director, usuarios.Nombre 'nombreautor', enlace FROM peliculas,usuarios where peliculas.ID_Autor = usuarios.ID and peliculas.nombre like '%$b%';";
     $consulta = mysqli_query($conex, $sql) or die("Error en la consulta SQL");
     
     //Obtiene la cantidad de filas que hay en la consulta.
@@ -33,6 +33,7 @@ if (isset($b) && $b != "") {
         // en la consulta, así que obtenemos los datos y 
         // los mostramos en un bucle.
         while($resultados = mysqli_fetch_array($consulta,MYSQLI_ASSOC)) {
+            $id = $resulados['peliculas.id'];
             $Nombre = $resultados['nombrepeli'];
             $Genero = $resultados['genero'];
             $Director = $resultados['director'];
@@ -41,7 +42,7 @@ if (isset($b) && $b != "") {
             
             // Resultado de la búsqueda.
             $mensaje .= "
-            <tr><td>$Nombre</td><td>$Genero</td><td>$Director</td><td>$Autor</td><td>$Enlace</td></tr>";    
+            <tr><td>$Nombre</td><td>$Genero</td><td>$Director</td><td>$Autor</td><td><a href='http://$Enlace'>Descargar</a></td><td><button onclick='borraPeli($IDpeli);'>Borrar</button></td></tr>";    
         }
         // Muestra los resultados, cierra la conexión y sal de la función.
         echo $mensaje;

@@ -3,6 +3,7 @@
         <link rel="stylesheet" href="estilos.css" type="text/css"/> 
         <title>Panel de Administracion | Peliculas Alex S.L.</title>
         <script type="text/javascript" src="buscar.js" ></script>
+        <script type="text/javascript" src="borrapeli.js" ></script>
         <script type="text/javascript" src="jquery-2.2.1.min.js" ></script>
 </head>
 <body>

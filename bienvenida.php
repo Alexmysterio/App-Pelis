@@ -2,6 +2,7 @@
 <html> 
 <head> 
 <title>Redirigir al navegador a otra URL</title> 
+<link rel="stylesheet" href="estilos.css" type="text/css"/> 
 <META HTTP-EQUIV="REFRESH" CONTENT="5;URL=index.php"> 
 </head> 
 <body> 
