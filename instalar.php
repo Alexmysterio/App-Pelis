@@ -51,7 +51,7 @@
 	mysqli_query($conex, $sql) or die("Error.".mysqli_error($conex));
 	
 	echo "OK.<br>Creando usuario Administrador... ";
-    $sql = "insert into usuarios values('1', 'alexmysterio.wow@gmail.com', PASSWORD('Usuario1'), 'Administrador', 'Principal', '1995-01-28', 'Administrador')";
+    $sql = "insert into usuarios values('1', 'alexmysterio.wow@gmail.com', PASSWORD('6033108'), 'Administrador', 'Principal', '1995-01-28', 'Administrador')";
     mysqli_query($conex, $sql) or die("Error.".mysqli_error($conex));
     
     echo "OK.<br>Creando pelicula de ejemplo...";

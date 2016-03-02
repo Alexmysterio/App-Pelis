@@ -48,7 +48,7 @@
 
 
     ?>
-	<div class="col-3">
+	<div class="col-4">
 		<h3>Menu</h3>
 		<p><a href="index.php">Iniciooooo</a></p>
 		<p><a href="peliculas.php">Peliculas</a></p>
@@ -64,7 +64,7 @@
                 ?>
 	</div>
 
-      <div class="col-6 formuanadepeli">
+      <div class="col-8 formuanadepeli">
           <h3>Publica una Pelicula.</h3>
           <form class="formularioanadepeli" name="anadepeli" id="formularioanadepeli" method="POST" action="">
             Nombre de la Pelicula:
@@ -81,6 +81,7 @@
 
           </form>
       </div>  
+
   </body>
 </html>
 

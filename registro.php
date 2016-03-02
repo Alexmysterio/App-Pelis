@@ -43,7 +43,7 @@
         $usuario=$_SESSION[Nombreuser];
         cabecera()
     ?>
-	<div class="col-4">
+	<div class="col-3">
 		<h3>Menu</h3>
 		<p><a href="index.php">Inicio</a></p>
 		<p><a href="peliculas.php">Peliculas</a></p>
@@ -57,20 +57,20 @@
 		?>
 	</div>
       
-      <div class="col-5 formuRegistro">
+      <div class="col-6 formuRegistro">
           <h3>Formulario de registro.</h3>
-          <form name="registro" id="formularioRegistro" method="POST" action="">
-			Correo Electronico:
-            <input type="text" name="email" placeholder="Correo electrónico" required/><br>
+          <form name="registro" class="formularioRegistro" id="formularioRegistro" method="POST" action="">
+            Correo Electronico:
+            <input type="text" class="texto" name="email" placeholder="Correo electrónico" required/><br>
             Contraseña:
-            <input type="password" name="password" placeholder="Contraseña" required/><br>
+            <input type="password" class="texto" name="password" placeholder="Contraseña" required/><br>
             Nombre:
-            <input type="text" name="nombre" placeholder="Nombre" required/><br>
+            <input type="text" class="texto" name="nombre" placeholder="Nombre" required/><br>
             Apellidos:
-            <input type="text" name="apellidos" placeholder="Apellidos" required/><br>
+            <input type="text" class="texto" name="apellidos" placeholder="Apellidos" required/><br>
             Fecha de Nacimiento:
-            <input type="date" name="nacimiento" placeholder="dd/mm/aaaa" required/><br>
-            <input type="submit" name="registrar" value="Registrarse" />
+            <input type="date" class="texto" name="nacimiento" placeholder="dd/mm/aaaa" required/><br>
+            <input type="submit" class="registrar" name="registrar" value="Registrarse" />
 
 
           </form>

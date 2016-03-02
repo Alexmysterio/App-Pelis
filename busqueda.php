@@ -30,7 +30,7 @@
                 ?>
 	</div>
 
-	<div class="col-6"><?php
+	<div class="listapelis col-6"><?php
 		include_once 'configBD.php';
                 $busqueda = $_POST['busqueda'];
 		//Conexion a la base de datos

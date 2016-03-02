@@ -8,6 +8,7 @@
     float: left;
     padding: 15px;
     display: block;
+    margin: 0 auto;
 }
 /* Para ordenadores: */
 @media only screen and (min-width: 768px) {
@@ -57,9 +58,9 @@ tr:hover td { background: #d0dafd; color: #339; }
 /* Formulario de Contacto, Estilo Básico
 ----------------------------------------------- */
 /* Contenedor principal */
-.formularioanadepeli {
+div.formuanadepeli, div.formuRegistro {
 width:100%;
-max-width: 280px;
+max-width: 380px;
 margin: 0 auto;
 margin-bottom: 25px;
 float: left;
@@ -72,6 +73,11 @@ border-radius: 5px;
 text-align: center;
 }
 
+div.formuanadepeli form{
+    margin: 0 auto;
+    text-align: left;
+}
+
 /* Estilos de los campos */
 .texto {
 width: 100%;
@@ -80,10 +86,10 @@ margin-bottom: 10px;
 }
 
 /* Botón de enviar */
-.anadir {
+.anadir, .registrar {
 float: right;
-width: 25%;
-max-width: 35%;
+width: 35%;
+max-width: 45%;
 height: auto;
 background: #28597a;
 padding: 2px 5px;
@@ -97,7 +103,7 @@ font-weight: normal;
 margin-bottom: 10px;
 }
 /* Botón de enviar al pasar el cursor */
-.anadir:hover{
+.anadir:hover, .registrar:hover{
 background: #4a7694;
 border: none;
 }
