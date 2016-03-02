@@ -5,13 +5,13 @@
     // que el PHP, para evitar sobrecargar el servidor con
     // datos incorrectos (validación JS con función registro()).
     
-
-    
     if(isset($_POST['anadepeli'])){
         include_once 'configBD.php';
         include_once 'funciones.php';
         include_once 'control.php';
+        seguridad_re();
         $idautor=$_SESSION['ID'];
+
 
         // Conexión con la base de datos.
         $conexion = mysqli_connect($host, $user, $password, $database, $port) 
@@ -41,17 +41,16 @@
     <?php
         require 'funciones.php';
         require 'control.php';       
-        session_start();
-        seguridad_re();   
-        $usuario=$_SESSION[Nombreuser];
+        seguridad_re();
+        $usuario=$_SESSION['Nombreuser'];
         cabecera();
 
 
 
     ?>
-	<div class="col-4">
+	<div class="col-3">
 		<h3>Menu</h3>
-		<p><a href="index.php">Inicio</a></p>
+		<p><a href="index.php">Iniciooooo</a></p>
 		<p><a href="peliculas.php">Peliculas</a></p>
 		<p><a href="publicar.php">Publicar</a></p>
 		<?php if(!isset($_SESSION['autenticado'])){
@@ -65,19 +64,19 @@
                 ?>
 	</div>
 
-      <div class="col-5 formuanadepeli">
+      <div class="col-6 formuanadepeli">
           <h3>Publica una Pelicula.</h3>
-          <form name="anadepeli" id="formularioanadepeli" method="POST" action="">
-			Nombre de la Pelicula:
-            <input type="text" name="Nombre" placeholder="Nombre" required/><br>
+          <form class="formularioanadepeli" name="anadepeli" id="formularioanadepeli" method="POST" action="">
+            Nombre de la Pelicula:
+            <input type="text" class="texto" name="Nombre" placeholder="Nombre" required/><br>
             Genero:
-            <input type="text" name="Genero" placeholder="Genero" required/><br>
+            <input type="text" class="texto" name="Genero" placeholder="Genero" required/><br>
             Director:
-            <input type="text" name="Director" placeholder="Director" required/><br>
+            <input type="text" class="texto" name="Director" placeholder="Director" required/><br>
             Enlace:
-            <input type="text" name="Enlace" placeholder="Enlace" required/><br>          
+            <input type="text" class="texto" name="Enlace" placeholder="Enlace" required/><br>          
 
-            <input type="submit" name="anadepeli" value="Añadir" />
+            <input type="submit" class="anadir" name="anadepeli" value="Añadir" />
 
 
           </form>

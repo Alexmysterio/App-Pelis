@@ -10,7 +10,7 @@
         include_once 'funciones.php';
         include_once 'control.php';
         session_start();
-        $usuario=$_SESSION[Nombreuser];
+        $usuario=$_SESSION['Nombreuser'];
         cabecera();
     ?>
         

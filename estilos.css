@@ -1,7 +1,6 @@
 
 * {
     box-sizing: border-box;
-    background-image: url("fondo.png");
 } 
  /* Para móviles: */
 [class*="col-"] {
@@ -26,24 +25,79 @@
     .col-12 {width: 100%;}
 }
 
+body {    background-image: url("fondo.png");
+}
 
 .cabecera{
     color:red;
     text-align: center;
 }
 
-.listapelis{
-    border: 1px solid;
+div.resultado, div.listapelis{
+text-align: center;
 }
 
-.menulateral{
-    background-color: blue;
+div.resultado table, div.listapelis table {
+margin: 0 auto;
+text-align: left;
 }
 
-.bienvenida{
-    background-color: white;
+table {     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 12px;    margin: 45px;     width: 480px; text-align: left;    border-collapse: collapse; }
+
+th {     font-size: 13px;     font-weight: normal;     padding: 8px;     background: #b9c9fe;
+    border-top: 4px solid #aabcfe;    border-bottom: 1px solid #fff; color: #039; }
+
+td {    padding: 8px;     background: #e8edff;     border-bottom: 1px solid #fff;
+    color: #669;    border-top: 1px solid; }
+
+
+tr:hover td { background: #d0dafd; color: #339; }
+
+/* Formulario de Contacto, Estilo Básico
+----------------------------------------------- */
+/* Contenedor principal */
+.formularioanadepeli {
+width:100%;
+max-width: 280px;
+margin: 0 auto;
+margin-bottom: 25px;
+float: left;
+padding: 10px;
+background: #d5dde6;
+color: #000;
+border: 1px solid #C1C1C1;
+box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+border-radius: 5px;
+text-align: center;
 }
 
-.buscador{
-    background-color: white;
+/* Estilos de los campos */
+.texto {
+width: 100%;
+max-width: 100%;
+margin-bottom: 10px;
+}
+
+/* Botón de enviar */
+.anadir {
+float: right;
+width: 25%;
+max-width: 35%;
+height: auto;
+background: #28597a;
+padding: 2px 5px;
+border-radius: 15px;
+border: none;
+text-shadow: rgba(0,0,0,.4) 0 1px 0;
+color: #fff;
+font-size: 13px;
+font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+font-weight: normal;
+margin-bottom: 10px;
+}
+/* Botón de enviar al pasar el cursor */
+.anadir:hover{
+background: #4a7694;
+border: none;
 }

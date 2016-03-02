@@ -10,11 +10,11 @@
         require 'funciones.php';
         require 'control.php';
         session_start();
-        $usuario=$_SESSION[Nombreuser];
+        $usuario=$_SESSION['Nombreuser'];
         cabecera()
     ?>
     
-	<div class="col-4">
+	<div class="col-3">
 		<h3>Menu</h3>
 		<p><a href="index.php">Inicio</a></p>
 		<p><a href="peliculas.php">Peliculas</a></p>
@@ -30,7 +30,7 @@
                 ?>
 	</div>
 
-	<div class="col-4"><?php
+	<div class="col-6"><?php
 		include_once 'configBD.php';
                 $busqueda = $_POST['busqueda'];
 		//Conexion a la base de datos
@@ -48,7 +48,7 @@
 		?>
 	</div>
           
-	<div class="col-4"><p>Buscar una pelicula</p>
+	<div class="col-3"><p>Buscar una pelicula</p>
             <form method="POST" action="busqueda.php"> 
             <input type="text" name="busqueda" size="20"><br><br> 
             <input type="submit" value="Buscar" name="buscar"> 

@@ -13,10 +13,10 @@ include_once 'funciones.php';
 // $_GET[urlVuelta] me da el url de la p�gina origen
 // $_GET ... Siguientes los valores de los campos de la primary key
 
-if(isset($_GET['tabla'])){
+if(isset($_GET['id'])){
     include_once  'configBD.php';
     $conexion=  mysqli_connect($host, $user, $password, $database, $port)  or die("<br>Error en la conexion con la BD ".mysqli_error($conexion));
-    $sql="Delete from $_GET[tabla] where id= '$_GET[id]';";
+    $sql="Delete from peliculas where id= '$_GET[id]';";
     
     mysqli_query($conexion, $sql) or die("Error en el borrado");
     mysqli_close($conexion);
@@ -26,6 +26,6 @@ if(isset($_GET['tabla'])){
     //header("Location:".$_GET['urlVuelta']); 
     
 }else{
-	echo "Valores recibidos $_GET[tabla] $_GET[id]";
+	echo "Valores recibidos $_GET[id]";
 }
 ?>

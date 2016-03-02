@@ -13,7 +13,7 @@ if (isset($b) && $b != "") {
     $conex = mysqli_connect($host, $user, $password, $database, $port);
      
     // Búsqueda. Solo muestra los documentos públicos o del usuario.
-    $sql ="SELECT peliculas.id 'idpeli', usuarios.id 'iduser', peliculas.nombre 'nombrepeli', genero, director, usuarios.Nombre 'nombreautor', enlace FROM peliculas,usuarios where peliculas.ID_Autor = usuarios.ID and peliculas.nombre like '%$b%';";
+    $sql ="SELECT peliculas.id 'idpeli', usuarios.id 'iduser', peliculas.nombre 'nombrepeli', genero, director, usuarios.Nombre 'nombreautor', enlace FROM peliculas,usuarios where peliculas.ID_Autor = usuarios.ID and peliculas.nombre like '%$b%' order by peliculas.nombre;";
     $consulta = mysqli_query($conex, $sql) or die("Error en la consulta SQL");
     
     //Obtiene la cantidad de filas que hay en la consulta.
@@ -28,12 +28,12 @@ if (isset($b) && $b != "") {
     } else {
         //Si hay resultados:
         echo 'Resultados de la búsqueda: <strong>'.$b.'</strong>';
-        echo '<table><tr><th>Nombre</th><th>Genero</th><th>Director</th><th>Autor</th><th>Enlace</th></tr>';
+        echo '<table><tr><th>Nombre</th><th>Genero</th><th>Director</th><th>Autor</th><th>Enlace</th><th>Borrar</th></tr>';
         // La variable $resultados contiene el array que se genera 
         // en la consulta, así que obtenemos los datos y 
         // los mostramos en un bucle.
         while($resultados = mysqli_fetch_array($consulta,MYSQLI_ASSOC)) {
-            $id = $resulados['peliculas.id'];
+            $id = $resultados['idpeli'];
             $Nombre = $resultados['nombrepeli'];
             $Genero = $resultados['genero'];
             $Director = $resultados['director'];
@@ -42,7 +42,7 @@ if (isset($b) && $b != "") {
             
             // Resultado de la búsqueda.
             $mensaje .= "
-            <tr><td>$Nombre</td><td>$Genero</td><td>$Director</td><td>$Autor</td><td><a href='http://$Enlace'>Descargar</a></td><td><button onclick='borraPeli($IDpeli);'>Borrar</button></td></tr>";    
+            <tr id=$id><td>$Nombre</td><td>$Genero</td><td>$Director</td><td>$Autor</td><td><a href='http://$Enlace'>Descargar</a></td><td><button onclick='borraPeli($id);'>Borrar</button></td></tr>";    
         }
         // Muestra los resultados, cierra la conexión y sal de la función.
         echo $mensaje;

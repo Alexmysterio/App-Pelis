@@ -11,11 +11,11 @@
         require 'funciones.php';
         require 'control.php';
         session_start();
-        $usuario=$_SESSION[Nombreuser];
+        $usuario=$_SESSION['Nombreuser'];
         cabecera()
     ?>
     
-	<div class="col-4">
+	<div class="col-3">
 		<h3>Menu</h3>
 		<p><a href="index.php">Inicio</a></p>
 		<p><a href="peliculas.php">Peliculas</a></p>
@@ -31,14 +31,14 @@
                 ?>
 	</div>
 
-	<div class="listapelis col-4"><?php
+	<div class="listapelis col-6"><?php
 		include_once 'configBD.php';
 
 		//Conexion a la base de datos
 		$conexion = mysqli_connect($host,$user, $password, $database, $port) or die("error".mysqli_error($conexion));
 		
 		////Obteniendo registros de la base de datos a traves de una consulta SQL
-		$consulta = "SELECT peliculas.nombre 'nombrepeli', genero, director, usuarios.Nombre 'nombreautor', enlace FROM peliculas,usuarios where peliculas.ID_Autor = usuarios.ID;";
+		$consulta = "SELECT peliculas.nombre 'nombrepeli', genero, director, usuarios.Nombre 'nombreautor', enlace FROM peliculas,usuarios where peliculas.ID_Autor = usuarios.ID order by peliculas.nombre;";
 		$resultado = mysqli_query ($conexion, $consulta) or die ("Error".mysqli_error($conexion).$consulta);
 		print "<table>
 				<tr><th>Nombre</th><th>Genero</th><th>Director</th><th>Autor</th><th>Enlace</th></tr>";
@@ -50,7 +50,7 @@
 		?>
 	</div>
           
-	<div class="col-4"><p>Buscar una pelicula</p>
+	<div class="col-3"><p>Buscar una pelicula</p>
             <form method="POST" action="busqueda.php"> 
             <input type="text" name="busqueda" size="20"><br><br> 
             <input type="submit" value="Buscar" name="buscar"> 

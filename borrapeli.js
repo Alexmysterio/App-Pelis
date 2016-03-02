@@ -1,14 +1,14 @@
-		function borraPeli(varid,varTabla){	
+		function borraPeli(id){	
 			
         $.ajax({
             url: 'borrapeli.php',  
             type: 'GET',
             // Form data
             //datos del formulario
-            data:{tabla:varTabla , id: varid},
+            data:{id: id},
             //mientras enviamos el archivo
             beforeSend: function(){
-             if(!confirm("Quieres borrar "+varid)){
+             if(!confirm("Quieres borrar "+id)){
 				exit(0);
 			 }
              
@@ -17,7 +17,7 @@
             success: function(data){
                
 				    $('#mensajes').html("Borrado Correcto");
-				    var miFila=document.getElementById(varid);
+				    var miFila=document.getElementById(id);
 				    miFila.parentNode.removeChild(miFila);
 				
 				
