@@ -55,7 +55,16 @@ td {    padding: 8px;     background: #e8edff;     border-bottom: 1px solid #fff
 
 tr:hover td { background: #d0dafd; color: #339; }
 
-/* Formulario de Contacto, Estilo Básico
+a.botondescarga {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: initial;
+    padding: 5px;
+}
+
+/* Formularios Publicar, Registrar y Iniciar Sesion
 ----------------------------------------------- */
 /* Contenedor principal */
 div.formuanadepeli, div.formuRegistro {

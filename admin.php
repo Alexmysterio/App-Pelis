@@ -4,6 +4,7 @@
         <title>Panel de Administracion | Peliculas Alex S.L.</title>
         <script type="text/javascript" src="buscar.js" ></script>
         <script type="text/javascript" src="borrapeli.js" ></script>
+        <script type="text/javascript" src="borrauser.js" ></script>
         <script type="text/javascript" src="jquery-2.2.1.min.js" ></script>
 </head>
 <body>

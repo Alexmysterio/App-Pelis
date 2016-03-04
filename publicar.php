@@ -50,7 +50,7 @@
     ?>
 	<div class="col-4">
 		<h3>Menu</h3>
-		<p><a href="index.php">Iniciooooo</a></p>
+		<p><a href="index.php">Inicio</a></p>
 		<p><a href="peliculas.php">Peliculas</a></p>
 		<p><a href="publicar.php">Publicar</a></p>
 		<?php if(!isset($_SESSION['autenticado'])){

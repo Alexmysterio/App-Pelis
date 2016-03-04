@@ -43,7 +43,7 @@
 		print "<table>
 				<tr><th>Nombre</th><th>Genero</th><th>Director</th><th>Autor</th><th>Enlace</th></tr>";
 		while($fila=  mysqli_fetch_array($resultado,MYSQLI_ASSOC)){
-        echo "<tr><td>$fila[nombrepeli]</td> <td>$fila[genero]</td> <td>$fila[director]</td> <td>$fila[nombreautor]</td> <td><a href=http://$fila[enlace]>Descarga</a></td></tr>";
+        echo "<tr><td>$fila[nombrepeli]</td> <td>$fila[genero]</td> <td>$fila[director]</td> <td>$fila[nombreautor]</td> <td><a href=http://$fila[enlace] class='botondescarga'>Descarga</a></td></tr>";
 		}print "</table>";
 		mysqli_free_result($resultado);
 		mysqli_close($conexion);

@@ -28,7 +28,7 @@ if (isset($b) && $b != "") {
     } else {
         //Si hay resultados:
         echo 'Resultados de la búsqueda: <strong>'.$b.'</strong>';
-        echo '<table><tr><th>ID</th><th>Mail_login</th><th>Password</th><th>Nombre</th><th>Apellidos</th><th>Nacimiento</th><th>Rol</th></tr>';
+        echo '<table><tr><th>ID</th><th>Mail_login</th><th>Password</th><th>Nombre</th><th>Apellidos</th><th>Nacimiento</th><th>Rol</th><th>Borrar</th></tr>';
         // La variable $resultados contiene el array que se genera 
         // en la consulta, así que obtenemos los datos y 
         // los mostramos en un bucle.
@@ -43,7 +43,7 @@ if (isset($b) && $b != "") {
             
             // Resultado de la búsqueda.
             $mensaje .= "
-            <tr><td>$ID</td><td>$Mail_login</td><td>$Password</td><td>$Nombre</td><td>$Apellidos</td><td>$Nacimiento</td><td>$Rol</td></tr>";    
+            <tr id='$ID'><td>$ID</td><td>$Mail_login</td><td>$Password</td><td>$Nombre</td><td>$Apellidos</td><td>$Nacimiento</td><td>$Rol</td><td><button onclick='borraUser($ID)'>Borrar</button></tr>";    
         }
         // Muestra los resultados, cierra la conexión y sal de la función.
         echo $mensaje;
