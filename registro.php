@@ -70,7 +70,7 @@
             <input type="text" class="texto" name="apellidos" placeholder="Apellidos" required/><br>
             Fecha de Nacimiento:
             <input type="date" class="texto" name="nacimiento" placeholder="dd/mm/aaaa" required/><br>
-            <input type="submit" class="registrar" name="registrar" value="Registrarse" />
+            <input type="submit" class="registrar" name="registrar" value="Registrarse" onclick="alert('Registro realizado con exito.')"/>
 
 
           </form>

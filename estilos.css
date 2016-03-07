@@ -29,9 +29,76 @@
 body {    background-image: url("fondo.png");
 }
 
+
+
+header {
+	width:100%; /* Establecemos que el header abarque el 100% del documento */
+	overflow:hidden; /* Eliminamos errores de float */
+	background:#252932;
+	margin-bottom:20px;
+}
+ 
+.wrapper {
+	width:90%; /* Establecemos que el ancho sera del 90% */
+	max-width:1000px; /* Aqui le decimos que el ancho máximo sera de 1000px */
+	margin:auto; /* Centramos los elementos */
+	overflow:hidden; /* Eliminamos errores de float */
+}
+ 
+header .logo {
+	color:#f2f2f2;
+	font-size:40px;
+	line-height:180px;
+	float:left;
+}
+ 
+header nav {
+	float:right;
+	line-height:180px;
+}
+ 
+header nav a {
+	display:inline-block;
+	color:#fff;
+	text-decoration:none;
+	padding:10px 10px;
+	line-height:normal;
+	font-size:20px;
+	font-weight:bold;
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease;
+}
+ 
+header nav a:hover {
+	background:#f56f3a;
+	border-radius:50px;
+}
+
+.header2 {
+	position: fixed;
+	height:100px;
+}
+ 
+.header2 .logo {
+	line-height:100px;
+	font-size:30px;
+}
+ 
+.header2 nav {
+	line-height:100px;
+}
+
+
+
+
 .cabecera{
     color:red;
     text-align: center;
+}
+
+div.bienvenida{
+    margin:30%;
 }
 
 div.resultado, div.listapelis{
