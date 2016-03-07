@@ -10,11 +10,11 @@ define("Registrado", "Registrado");
 // de bienvenida (usuario y rol).
 
 function cabecera(){
-    echo '    <header class="col-12">
+    echo '    <header>
 		<div class="wrapper">
-			<div class="logo">PelisMania</div>
+		<div class="logo">PelisMania</div>
 			
-			<nav>
+		<nav>
                 <a href="index.php">Inicio</a>
 		<a href="peliculas.php">Peliculas</a>
 		<a href="publicar.php">Publicar</a>';
@@ -26,7 +26,7 @@ function cabecera(){
                      <a href='logout.php'>Cerrar Sesion</a>";};
                 if($_SESSION["Rol"] == Administrador){
                 echo  "<a href='admin.php'>Panel de Administrador </a>";};
-	echo'	</nav>
+                echo'	</nav>
 		</div>
     </header>';
 }

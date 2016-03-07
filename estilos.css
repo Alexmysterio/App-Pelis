@@ -34,7 +34,7 @@ body {    background-image: url("fondo.png");
 header {
 	width:100%; /* Establecemos que el header abarque el 100% del documento */
 	overflow:hidden; /* Eliminamos errores de float */
-	background:#252932;
+	background:rgba(37, 41, 50, 0.22);
 	margin-bottom:20px;
 }
  
@@ -78,6 +78,7 @@ header nav a:hover {
 .header2 {
 	position: fixed;
 	height:100px;
+        background: rgba(37, 41, 50, 0.70);
 }
  
 .header2 .logo {
@@ -90,15 +91,32 @@ header nav a:hover {
 }
 
 
-
-
-.cabecera{
-    color:red;
-    text-align: center;
+@media screen and (max-width: 950px) {
+	header .logo,
+	header nav {
+		width:100%;
+		text-align:center; /*Centramos el menu y el logotipo*/
+		line-height:100px;
+	}
+ 
+	.header2 {
+		height:auto;
+	}
+ 
+	.header2 .logo,
+	.header2 nav {
+		line-height:50px;
+	}
 }
 
-div.bienvenida{
-    margin:30%;
+
+
+
+div.bienvenida div{
+    padding:10%;
+    padding-top:5%;
+    border: 5px solid;
+    
 }
 
 div.resultado, div.listapelis{
@@ -134,13 +152,15 @@ a.botondescarga {
 /* Formularios Publicar, Registrar y Iniciar Sesion
 ----------------------------------------------- */
 /* Contenedor principal */
+.formuanadepeli form{
+    text-align:center;
+}
 div.formuanadepeli, div.formuRegistro {
 width:100%;
 max-width: 380px;
 margin: 0 auto;
 margin-bottom: 25px;
-float: left;
-padding: 10px;
+padding: 30px;
 background: #d5dde6;
 color: #000;
 border: 1px solid #C1C1C1;
@@ -183,3 +203,32 @@ margin-bottom: 10px;
 background: #4a7694;
 border: none;
 }
+
+.buscador{
+    text-align:center;
+}
+.busqueda {
+    background: url(search-white.png) no-repeat 20px 12px #fcfcfc;
+    border: 1px solid #d1d1d1;
+    font: bold 22px Arial,Helvetica,Sans-serif;
+    color: #bebebe;
+    width: 300px;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+    text-align:center;
+    }
+
+.busqueda:focus {
+    width: 400px;
+    }
+    

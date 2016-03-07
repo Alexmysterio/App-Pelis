@@ -48,23 +48,9 @@
 
 
     ?>
-	<div class="col-4">
-		<h3>Menu</h3>
-		<p><a href="index.php">Inicioooo</a></p>
-		<p><a href="peliculas.php">Peliculas</a></p>
-		<p><a href="publicar.php">Publicar</a></p>
-		<?php if(!isset($_SESSION['autenticado'])){
-		echo "<p><a href='login.php'>Iniciar Sesion</a></p>
-		<p><a href='registro.php'>Registro</a></p>";}
-		if(isset($_SESSION['autenticado'])){
-		echo "<p><a href='perfil.php'>Mi Perfil($usuario)</a></p>
-                     <p><a href='logout.php'>Cerrar Sesion</a></p>";}
-                if($_SESSION['Rol'] == Administrador){
-                echo  "<p><a href='admin.php'>Panel de Administrador </a></p>";}
-                ?>
-	</div>
 
-      <div class="col-8 formuanadepeli">
+      <div class="col-12 centraform" >
+      <div class="formuanadepeli">
           <h3>Publica una Pelicula.</h3>
           <form class="formularioanadepeli" name="anadepeli" id="formularioanadepeli" method="POST" action="">
             Nombre de la Pelicula:
@@ -81,7 +67,7 @@
 
           </form>
       </div>  
-
+      </div>
   </body>
 </html>
 

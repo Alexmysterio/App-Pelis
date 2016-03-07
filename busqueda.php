@@ -14,23 +14,13 @@
         cabecera()
     ?>
     
-	<div class="col-3">
-		<h3>Menu</h3>
-		<p><a href="index.php">Inicio</a></p>
-		<p><a href="peliculas.php">Peliculas</a></p>
-		<p><a href="publicar.php">Publicar</a></p>
-		<?php if(!isset($_SESSION['autenticado'])){
-		echo "<p><a href='login.php'>Iniciar Sesion</a></p>
-		<p><a href='registro.php'>Registro</a></p>";}
-		if(isset($_SESSION['autenticado'])){
-		echo "<p><a href='perfil.php'>Mi Perfil($usuario)</a></p>
-                     <p><a href='logout.php'>Cerrar Sesion</a></p>";}
-                if($_SESSION['Rol'] == Administrador){
-                echo  "<p><a href='admin.php'>Panel de Administrador </a></p>";}
-                ?>
+        <div class="col-12 buscador">
+            <form method="POST" action="busqueda.php"> 
+                <input type="text" class="busqueda" name="busqueda" size="40" placeholder="Buscar una pelicula">
+            </form> 
 	</div>
 
-	<div class="listapelis col-6"><?php
+	<div class="col-12 listapelis"><?php
 		include_once 'configBD.php';
                 $busqueda = $_POST['busqueda'];
 		//Conexion a la base de datos
@@ -46,13 +36,6 @@
 		mysqli_free_result($resultado);
 		mysqli_close($conexion);
 		?>
-	</div>
-          
-	<div class="col-3"><p>Buscar una pelicula</p>
-            <form method="POST" action="busqueda.php"> 
-            <input type="text" name="busqueda" size="20"><br><br> 
-            <input type="submit" value="Buscar" name="buscar"> 
-            </form> 
 	</div>
 
 
