@@ -129,12 +129,12 @@ text-align: left;
 }
 
 table {     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-    font-size: 12px;    margin: 45px;     width: 480px; text-align: left;    border-collapse: collapse; }
+    font-size: 12px;    margin: 45px;     width: 60%; text-align: left;    border-collapse: collapse; }
 
-th {     font-size: 13px;     font-weight: normal;     padding: 8px;     background: #b9c9fe;
+th {     font-weight: bold ;font-size: 15px;     font-weight: normal;     padding: 18px;     background: #b9c9fe;
     border-top: 4px solid #aabcfe;    border-bottom: 1px solid #fff; color: #039; }
 
-td {    padding: 8px;     background: #e8edff;     border-bottom: 1px solid #fff;
+td {    padding: 18px;     background: #e8edff;     border-bottom: 1px solid #fff;
     color: #669;    border-top: 1px solid; }
 
 
@@ -152,10 +152,10 @@ a.botondescarga {
 /* Formularios Publicar, Registrar y Iniciar Sesion
 ----------------------------------------------- */
 /* Contenedor principal */
-.formuanadepeli form{
+.formuanadepeli, .formuRegistro, .formuLogin form{
     text-align:center;
 }
-div.formuanadepeli, div.formuRegistro {
+div.formuanadepeli, div.formuRegistro, div.formuLogin {
 width:100%;
 max-width: 380px;
 margin: 0 auto;
@@ -169,7 +169,7 @@ border-radius: 5px;
 text-align: center;
 }
 
-div.formuanadepeli form{
+div.formuanadepeli, div.formuRegistro, div.formuLogin form{
     margin: 0 auto;
     text-align: left;
 }
@@ -182,7 +182,7 @@ margin-bottom: 10px;
 }
 
 /* Botón de enviar */
-.anadir, .registrar {
+.anadir, .registrar, .autenticar {
 float: right;
 width: 35%;
 max-width: 45%;
@@ -199,7 +199,7 @@ font-weight: normal;
 margin-bottom: 10px;
 }
 /* Botón de enviar al pasar el cursor */
-.anadir:hover, .registrar:hover{
+.anadir:hover, .registrar:hover, .autenticar:hover{
 background: #4a7694;
 border: none;
 }
@@ -232,3 +232,16 @@ border: none;
     width: 400px;
     }
     
+.buscadmin form{
+        text-align:center;
+    }    
+.buscadmin p{
+        text-align: center;
+}
+    
+.webienvenida div{
+    border: solid;
+    margin: 50px;
+    padding: 50px;
+    text-align: center;
+}

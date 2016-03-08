@@ -1,7 +1,11 @@
-<html>
+<?php
+include_once 'control.php';
+session_start();
+?>
+    <html>
     <head>
 		<link rel="stylesheet" href="estilos.css" type="text/css"/> 
-        <title>Mi Perfil | Peliculas Alex S.L.</title>
+                <title>Mi Perfil |<?php echo ($_SESSION['Nombreuser']);?>| PelisMania</title>
     </head>
 <body>
     <?php
@@ -12,24 +16,14 @@
         cabecera()
     ?>
 
-	<div class="col-4">
-		<h3>Menu</h3>
-		<p><a href="index.php">Inicio</a></p>
-		<p><a href="peliculas.php">Peliculas</a></p>
-		<p><a href="publicar.php">Publicar</a></p>
-		<?php if(!isset($_SESSION['autenticado'])){
-		echo "<p><a href='login.php'>Iniciar Sesion</a></p>
-		<p><a href='registro.php'>Registro</a></p>";}
-		if(isset($_SESSION['autenticado'])){
-		echo "<p><a href='perfil.php'>Mi Perfil($usuario)</a></p>
-                     <p><a href='logout.php'>Cerrar Sesion</a></p>";}
-                if($_SESSION['Rol'] == Administrador){
-                echo  "<p><a href='admin.php'>Panel de Administrador </a></p>";}
-                ?>
+        <div class="col-12 buscador">
+            <form method="POST" action="busqueda.php"> 
+                <input type="text" class="busqueda" name="busqueda" size="40" placeholder="Buscar una pelicula">
+            </form> 
 	</div>
     
     
-        <div class="col-4"><?php
+        <div class="col-12 perfil"><?php
 		include_once 'configBD.php';
 
 		//Conexion a la base de datos

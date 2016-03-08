@@ -2,7 +2,7 @@
  <html>
     <head>
         <meta charset="UTF-8">
-        <title>Inicio de Sesion | Peliculas Alex S.L.</title>
+        <title>Inicio de Sesion | PelisMania</title>
         <link rel="stylesheet" href="estilos.css" type="text/css"/> 
     </head>
     <body>
@@ -21,30 +21,16 @@
             echo "$_GET[error]";
         }
         ?>
-	<div class="col-4">
-		<h3>Menu</h3>
-		<p><a href="index.php">Inicio</a></p>
-		<p><a href="peliculas.php">Peliculas</a></p>
-		<p><a href="publicar.php">Publicar</a></p>
-		<?php if(!isset($_SESSION['autenticado'])){
-		echo "<p><a href='login.php'>Iniciar Sesion</a></p>
-		<p><a href='registro.php'>Registro</a></p>";}
-		if(isset($_SESSION['autenticado'])){
-		echo "<p><a href='perfil.php'>Mi Perfil($usuario)</a></p>
-                     <p><a href='logout.php'>Cerrar Sesion</a></p>";}
-                if($_SESSION['Rol'] == Administrador){
-                echo  "<p><a href='admin.php'>Panel de Administrador </a></p>";}
-                ?>
-	</div>
-
-            <div class="col-2 formuLogin">
+        <div class="col-12 centraform">
+            <div class="formuLogin">
                 <h3>Inicie sesión</h3>
-                <form name="iniciaSesion" id="formularioSesion" method="post" action="control.php">
-                    <input type="text" name="Mail_login" placeholder="Correo Electronico" required /><br>
-                    <input type="password" name="pass" placeholder="Contraseña" required /><br>
-                    <input type="submit" name="autenticar" value="Iniciar sesión" onclick="inicioSesion(this);" /><br>
+                <form name="iniciaSesion" class='formularioLogin' id="formularioSesion" method="post" action="control.php">
+                    <input type="text" class='texto' name="Mail_login" placeholder="Correo Electronico" required /><br>
+                    <input type="password" class='texto' name="pass" placeholder="Contraseña" required /><br>
+                    <input type="submit" class='autenticar' name="autenticar" value="Iniciar sesión" onclick="inicioSesion(this);" /><br>
                     <p>¿No estás registrado? <a href="registro.php">Regístrate ahora.</a></p>
                 </form>
             </div>
+        </div>
     </body>
 </html>

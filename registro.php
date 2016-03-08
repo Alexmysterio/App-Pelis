@@ -32,7 +32,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="estilos.css" type="text/css"/> 
-    <title>Registro | Peliculas Alex S.L.</title>
+    <title>Registro | PelisMania</title>
   </head>
   <body>
 
@@ -43,21 +43,8 @@
         $usuario=$_SESSION[Nombreuser];
         cabecera()
     ?>
-	<div class="col-3">
-		<h3>Menu</h3>
-		<p><a href="index.php">Inicio</a></p>
-		<p><a href="peliculas.php">Peliculas</a></p>
-		<p><a href="publicar.php">Publicar</a></p>
-		<?php if(!isset($_SESSION['autenticado'])){
-		echo "<p><a href='login.php'>Iniciar Sesion</a></p>
-		<p><a href='registro.php'>Registro</a></p>";}
-		if(isset($_SESSION['autenticado'])){
-		echo "<p><a href='perfil.php'>Mi Perfil($usuario)</a></p>
-                     <p><a href='logout.php'>Cerrar Sesion</a></p>";}
-		?>
-	</div>
-      
-      <div class="col-6 formuRegistro">
+      <div class="col-12 centraform">
+      <div class="formuRegistro">
           <h3>Formulario de registro.</h3>
           <form name="registro" class="formularioRegistro" id="formularioRegistro" method="POST" action="">
             Correo Electronico:
@@ -71,9 +58,8 @@
             Fecha de Nacimiento:
             <input type="date" class="texto" name="nacimiento" placeholder="dd/mm/aaaa" required/><br>
             <input type="submit" class="registrar" name="registrar" value="Registrarse" onclick="alert('Registro realizado con exito.')"/>
-
-
           </form>
       </div>  
+      </div>
   </body>
 </html>

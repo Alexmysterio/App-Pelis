@@ -2,7 +2,7 @@
 <html>
 <head>
 		<link rel="stylesheet" href="estilos.css" type="text/css"/> 
-        <title>Busqueda | Peliculas Alex S.L.</title>
+        <title>Busqueda | PelisMania</title>
 
 </head>
 <body>

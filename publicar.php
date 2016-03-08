@@ -34,7 +34,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="estilos.css" type="text/css"/> 
-    <title>Publicar Pelicula | Peliculas Alex S.L.</title>
+    <title>Publicar Pelicula | PelisMania</title>
   </head>
   <body>
 
