@@ -36,7 +36,7 @@ function cabecera(){
 function seguridad_re(){
     session_start();
     if($_SESSION['autenticado'] != TRUE){
-      header("Location: index.php?error=NoAutenticado"); 
+      header("Location: login.php?error=Debes Iniciar Sesion"); 
   exit();  
     }
         
@@ -46,12 +46,12 @@ function seguridad_ad($Rol){
    session_start();
     if(isset($_SESSION['autenticado'])){
        if($_SESSION['Rol'] != $Rol){
-            header("Location: index.php?error=SinPrivilegios");
+            header("Location: index.php?error=No tienes privilegios para acceder");
             exit();
         }
     }else{
         session_destroy();
-        header("Location: index.php?error=NoAutenticado");
+        header("Location: index.php?error=Acceso solo para Administradores");
         exit();
     }
 }

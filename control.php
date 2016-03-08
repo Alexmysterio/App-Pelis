@@ -39,7 +39,7 @@
         }else{
             // Si el login es incorrecto, devuelve a la página
             // de inicio con un mensaje de error.
-            header("Location: index.php?error=FalloLoginPass");
+            header("Location: login.php?error=Usuario o Contraseña Incorrectos");
         }
     } 
 ?>

@@ -15,9 +15,15 @@
         session_start();
         $usuario=$_SESSION['Nombreuser'];
         cabecera();
-    ?>
-        
+        ?>
 
+    <div class="error"> <?php       if(isset($_GET['error'])){
+            echo "$_GET[error]";
+        };
+        ?>
+    </div>
+    
+    
         <div class="col-12 buscador">
             <form method="POST" action="busqueda.php"> 
                 <input type="text" class="busqueda" name="busqueda" size="40" placeholder="Buscar una pelicula">

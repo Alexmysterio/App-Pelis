@@ -29,8 +29,14 @@
 body {    background-image: url("fondo.png");
 }
 
+/*Estilos ERROR SESION O PRIVILEGIOS*/
+.error{
+    text-align: center;
+    color:red;
+}
 
 
+/*Estilos Cabecera TITULO mas el MENU*/
 header {
 	width:100%; /* Establecemos que el header abarque el 100% del documento */
 	overflow:hidden; /* Eliminamos errores de float */
@@ -67,6 +73,7 @@ header nav a {
 	font-weight:bold;
 	-webkit-transition:all 500ms ease;
 	-o-transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
 	transition:all 500ms ease;
 }
  
@@ -79,15 +86,24 @@ header nav a:hover {
 	position: fixed;
 	height:100px;
         background: rgba(37, 41, 50, 0.70);
+        	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
 }
  
 .header2 .logo {
 	line-height:100px;
 	font-size:30px;
+        	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
 }
  
 .header2 nav {
 	line-height:100px;
+        	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
 }
 
 
@@ -109,16 +125,20 @@ header nav a:hover {
 	}
 }
 
+/*FIN Estilos Cabecera TITULO mas el MENU*/
 
 
-
+/*Estilos Cuadro de BIENVENIDA y CONDICIONES*/
 div.bienvenida div{
     padding:10%;
     padding-top:5%;
     border: 5px solid;
     
 }
+/*FIN estulos BIENVENIDA y CONDICIONES*/
 
+
+/*Estilos Tablas PELIS y USERS*/
 div.resultado, div.listapelis{
 text-align: center;
 }
@@ -128,17 +148,18 @@ margin: 0 auto;
 text-align: left;
 }
 
-table {     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+.resultado table, .listapelis table {     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
     font-size: 12px;    margin: 45px;     width: 60%; text-align: left;    border-collapse: collapse; }
 
-th {     font-weight: bold ;font-size: 15px;     font-weight: normal;     padding: 18px;     background: #b9c9fe;
+.resultado th, .listapelis th {     font-weight: bold ;font-size: 15px;     font-weight: normal;     padding: 18px;     background: #b9c9fe;
     border-top: 4px solid #aabcfe;    border-bottom: 1px solid #fff; color: #039; }
 
-td {    padding: 18px;     background: #e8edff;     border-bottom: 1px solid #fff;
+.resultado td, .listapelis td {    padding: 18px;     background: #e8edff;     border-bottom: 1px solid #fff;
     color: #669;    border-top: 1px solid; }
 
 
 tr:hover td { background: #d0dafd; color: #339; }
+tr:hover th {background: #d0dafd; color:#339;}
 
 a.botondescarga {
     -webkit-appearance: button;
@@ -148,6 +169,8 @@ a.botondescarga {
     color: initial;
     padding: 5px;
 }
+/*FIN estilos tablas*/
+
 
 /* Formularios Publicar, Registrar y Iniciar Sesion
 ----------------------------------------------- */
@@ -203,7 +226,10 @@ margin-bottom: 10px;
 background: #4a7694;
 border: none;
 }
+/*FIN estilos FORMULARIOS*/
 
+
+/*Estilos cuadro BUSCADOR*/
 .buscador{
     text-align:center;
 }
@@ -238,10 +264,26 @@ border: none;
 .buscadmin p{
         text-align: center;
 }
-    
+/*FIN estilos cuadro BUSCADOR*/    
+
+
+/*Estilos cuadro BIENVENIDA AL INICIAR SESION*/
 .webienvenida div{
     border: solid;
     margin: 50px;
     padding: 50px;
     text-align: center;
 }
+/*Fin cuadro bienvenida con inicio de sesion*/
+
+/*Estilos Cuadro PERFIL*/
+.perfil div{
+    border: solid;
+    margin: 50px;
+    margin-top: 20px;
+    padding: 50px;
+    text-align: center;
+}
+
+
+/*Fin estilos cuadro PERFIL*/

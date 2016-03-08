@@ -5,7 +5,7 @@ session_start();
     <html>
     <head>
 		<link rel="stylesheet" href="estilos.css" type="text/css"/> 
-                <title>Mi Perfil |<?php echo ($_SESSION['Nombreuser']);?>| PelisMania</title>
+                <title>Mi Perfil | <?php echo ($_SESSION['Nombreuser']);?> | PelisMania</title>
     </head>
 <body>
     <?php
@@ -33,7 +33,7 @@ session_start();
 		$consulta = "select Mail_login, Password, Nombre, Apellidos, Nacimiento from usuarios where Mail_login = '$_SESSION[Mail_login]';";
 		$resultado = mysqli_query ($conexion, $consulta) or die ("Error".mysqli_error($conexion).$consulta);
 		while($fila=  mysqli_fetch_array($resultado,MYSQLI_ASSOC)){
-        echo "Mail: $fila[Mail_login]<p>Contraseña: $fila[Password]<p>Nombre: $fila[Nombre]<p>Apellidos: $fila[Apellidos]<p>Fecha de Nacimiento: $fila[Nacimiento]";
+        echo "<div class='perfil'><table><tr><th>Mail:</th> <td>$fila[Mail_login]</td></tr><tr><th>Contraseña:</th><td> $fila[Password]</td></tr><tr><th>Nombre:</th><td> $fila[Nombre]</td></tr><tr><th>Apellidos:</th><td> $fila[Apellidos]</td></tr><tr><th>Fecha de Nacimiento:</th><td> $fila[Nacimiento]</td></tr></table></div>";
 		}
 		mysqli_free_result($resultado);
 		mysqli_close($conexion);

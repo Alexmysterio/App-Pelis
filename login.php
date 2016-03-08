@@ -15,12 +15,15 @@
         session_start();
         $usuario=$_SESSION[Nombreuser];
         cabecera();
-        
-        // Si hay mensaje de error, muéstralo.
+        ?>
+      
+    <div class="error"> <?php       
         if(isset($_GET['error'])){
             echo "$_GET[error]";
-        }
+        };
         ?>
+    </div>
+        
         <div class="col-12 centraform">
             <div class="formuLogin">
                 <h3>Inicie sesión</h3>
