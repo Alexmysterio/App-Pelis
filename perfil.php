@@ -16,13 +16,14 @@ session_start();
         cabecera()
     ?>
 
+        <!--Buscador de Peliculas-->
         <div class="col-12 buscador">
             <form method="POST" action="busqueda.php"> 
                 <input type="text" class="busqueda" name="busqueda" size="40" placeholder="Buscar una pelicula">
             </form> 
 	</div>
     
-    
+        <!--Muestra la informacion del Usuario-->
         <div class="col-12 perfil"><?php
 		include_once 'configBD.php';
 

@@ -44,11 +44,9 @@
         seguridad_re();
         $usuario=$_SESSION['Nombreuser'];
         cabecera();
-
-
-
     ?>
 
+      <!--Formulario para publicar una Pelicula-->
       <div class="col-12 centraform" >
       <div class="formuanadepeli">
           <h3>Publica una Pelicula.</h3>
@@ -61,10 +59,7 @@
             <input type="text" class="texto" name="Director" placeholder="Director" required/><br>
             Enlace:
             <input type="text" class="texto" name="Enlace" placeholder="Enlace" required/><br>          
-
             <input type="submit" class="anadir" name="anadepeli" value="Añadir" onclick="alert('Pelicula publicada con exito')"/>
-
-
           </form>
       </div>  
       </div>

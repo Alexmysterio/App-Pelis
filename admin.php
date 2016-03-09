@@ -16,20 +16,22 @@
         cabecera()
     ?>
 
-    
+    <!--Buscador de Usuarios del Administrador-->
     	<div class="col-6 buscadmin"><p>Buscar un Usuario</p>
             <form method="POST"> 
                 <input type="search" class="busqueda" name="busqueda" placeholder="Usuario" id="busqueda" onkeyup="buscauser();" size="20"><br><br> 
             
             </form> 
-	</div>
+        </div>
     
+    <!--Buscador de Peliculas del Administrador-->
         <div class="col-6 buscadmin"><p>Buscar una Pelicula</p>
             <form method="POST"> 
                 <input type="search" class="busqueda" name="busqueda" placeholder="Pelicula" id="busqueda2" onkeyup="buscapeli();" size="20"><br><br>     
             </form> 
 	</div>
     
+    <!--Div que muestra los resultados de los buscadores del Administrador-->
     <div class="col-12 resultado" id="resultado">
         
     </div>

@@ -43,6 +43,8 @@
         $usuario=$_SESSION[Nombreuser];
         cabecera()
     ?>
+      
+      <!--Formulario de Registro de Usuarios-->
       <div class="col-12 centraform">
       <div class="formuRegistro">
           <h3>Formulario de registro.</h3>

@@ -17,13 +17,15 @@
         cabecera();
         ?>
       
+    <!--Muestra el error obtenido con GET-->
     <div class="error"> <?php       
         if(isset($_GET['error'])){
             echo "$_GET[error]";
         };
         ?>
     </div>
-        
+    
+    <!--Formulario de Inicio de Sesion-->
         <div class="col-12 centraform">
             <div class="formuLogin">
                 <h3>Inicie sesión</h3>

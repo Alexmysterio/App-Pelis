@@ -34,7 +34,7 @@
             $_SESSION['ID']=$fila['ID'];
             $_SESSION['Nombreuser']=$fila['Nombre'];
 
-           // Devolvemos al usuario a la página de inicio.
+           // Devolvemos al usuario a la página de Bienvenida.
            header("Location: bienvenida.php");
         }else{
             // Si el login es incorrecto, devuelve a la página

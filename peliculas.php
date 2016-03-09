@@ -18,12 +18,14 @@
         cabecera()
     ?>
     
+    <!--Buscador de Peliculas-->
         <div class="col-12 buscador">
             <form method="POST" action="busqueda.php"> 
                 <input type="text" class="busqueda" name="busqueda" size="40" placeholder="Buscar una pelicula">
             </form> 
 	</div>
 
+    <!-- Tabla que muestra todas las peliculas de la Base de Datos-->
 	<div class="col-12 listapelis"><?php
 		include_once 'configBD.php';
 
@@ -36,7 +38,7 @@
 		print "<table>
 				<tr><th>Nombre</th><th>Genero</th><th>Director</th><th>Autor</th><th>Enlace</th></tr>";
 		while($fila=  mysqli_fetch_array($resultado,MYSQLI_ASSOC)){
-        echo "<tr><td>$fila[nombrepeli]</td> <td>$fila[genero]</td> <td>$fila[director]</td> <td>$fila[nombreautor]</td> <td><a href=http://$fila[enlace] class='botondescarga'>Descarga</a></td></tr>";
+        echo "<tr><td>$fila[nombrepeli]</td> <td>$fila[genero]</td> <td>$fila[director]</td> <td>$fila[nombreautor]</td> <td><a target='_blank' href=http://$fila[enlace] class='botondescarga'>Descarga</a></td></tr>";
 		}print "</table>";
 		mysqli_free_result($resultado);
 		mysqli_close($conexion);

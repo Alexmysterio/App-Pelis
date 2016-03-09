@@ -42,7 +42,7 @@ if (isset($b) && $b != "") {
             
             // Resultado de la búsqueda.
             $mensaje .= "
-            <tr id=$id><td>$Nombre</td><td>$Genero</td><td>$Director</td><td>$Autor</td><td><a href='http://$Enlace'>Descargar</a></td><td><button onclick='borraPeli($id);'>Borrar</button></td></tr>";    
+            <tr id=$id><td>$Nombre</td><td>$Genero</td><td>$Director</td><td>$Autor</td><td><a target='_blank' href='http://$Enlace'>Descargar</a></td><td><button onclick='borraPeli($id);'>Borrar</button></td></tr>";    
         }
         // Muestra los resultados, cierra la conexión y sal de la función.
         echo $mensaje;

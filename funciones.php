@@ -6,8 +6,7 @@ session_start();
 define("Administrador", "Administrador");
 define("Registrado", "Registrado");
 
-// Función que carga la cabecera, incluyendo el mensaje
-// de bienvenida (usuario y rol).
+// Función que carga la cabecera + el Menu de la web
 
 function cabecera(){
     echo '    <header>

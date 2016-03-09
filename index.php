@@ -15,15 +15,17 @@
         session_start();
         $usuario=$_SESSION['Nombreuser'];
         cabecera();
-        ?>
+    ?>
 
-    <div class="error"> <?php       if(isset($_GET['error'])){
+    <!--Muestra el error obtenido con GET-->
+    <div class="error"> 
+        <?php       if(isset($_GET['error'])){
             echo "$_GET[error]";
         };
         ?>
     </div>
     
-    
+    <!--Buscador-->
         <div class="col-12 buscador">
             <form method="POST" action="busqueda.php"> 
                 <input type="text" class="busqueda" name="busqueda" size="40" placeholder="Buscar una pelicula">
@@ -70,7 +72,7 @@ En cualquier caso, el portal se reserva todos los derechos sobre los contenidos,
                 </p><p></p><p>
 7. Legislación aplicable, jurisdicción competente y notificaciones
                 </p><p>
-Las presentes condiciones se rigen y se interpretan de acuerdo con las Leyes de España. Para cualquier reclamación serán competentes los juzgados y tribunales de (indicar la ciudad). Todas las notificaciones, requerimientos, peticiones y otras comunicaciones que el Usuario desee efectuar a la Empresa titular del Portal deberán realizarse por escrito y se entenderá que han sido correctamente realizadas cuando hayan sido recibidas en la siguiente dirección (indicar dirección de correo en la que se desean recibir las notificaciones).
+Las presentes condiciones se rigen y se interpretan de acuerdo con las Leyes de España. Para cualquier reclamación serán competentes los juzgados y tribunales de Motril. Todas las notificaciones, requerimientos, peticiones y otras comunicaciones que el Usuario desee efectuar a la Empresa titular del Portal deberán realizarse por escrito y se entenderá que han sido correctamente realizadas cuando hayan sido recibidas en la siguiente dirección administracion@pelismania.com.
                 </p><p></p><p>
         </div>	
         </div>
